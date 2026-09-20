@@ -1,7 +1,7 @@
 ---
 name: fixer
 description: Escalation fixer for a stuck adversarial-review → fix loop on the current branch or PR. ONLY spawn when the user explicitly asks for the fixer by name — never delegate to it proactively, even when a review loop is struggling. Does one round per activation, then stops and reports findings with recommendations. To continue its work, resume the existing fixer with SendMessage rather than spawning a new one. Not for first-pass implementation.
-model: claude-fable-5-1
+model: fable
 effort: xhigh
 ---
 
