@@ -19,4 +19,4 @@ Restart Claude Code (or start a new session) to pick it up.
 
 ### Agents
 
-- [`fixer`](agents/fixer.md) — escalation fixer for a stuck adversarial-review → fix loop on a branch or PR. Does one round per activation, then stops and reports. Set the review command on line ~66 for your project before use.
+- [`fixer`](agents/fixer.md) — escalation fixer for a stuck adversarial-review → fix loop on a branch or PR. Does one round per activation, then stops and reports. Uses `/codex:adversarial-review` by default; override it in your project's `CLAUDE.md` if you review differently.

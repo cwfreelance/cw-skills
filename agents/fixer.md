@@ -61,10 +61,11 @@ Commit as you go with messages that say what changed and why.
 
 ## The round
 
-After you've applied this round's fixes, run the adversarial review exactly as this project does:
+After you've applied this round's fixes, run the adversarial review in the foreground so the findings come back within this activation. Invoke the `codex:adversarial-review` skill against the branch diff:
 
-<!-- TODO: put the exact command here, or make sure CLAUDE.md documents it -->
-`<codex adversarial review command against the diff>`
+`/codex:adversarial-review --wait --base <base-branch>`
+
+Pass `--wait` (not `--background`) so results return this turn, and `--base` with the branch's merge base so the review covers the whole change rather than only uncommitted work. If a project documents a different review command in its `CLAUDE.md`, use that instead.
 
 **If it returns findings:** triage them, write your report, stop. Do not fix them in this round. Which ones get addressed is the human's call.
 
